@@ -13,15 +13,20 @@
 
 <body>
 
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Prueba de API para validación de documentos</h1>
+        <p class="lead">Validación de documentos</p>
+        <hr class="my-4">
+        <a href="https://github.com/nekszer/validacion-documentos-mexicanos.github.io">Ver en github</a>
+    </div>
+
     <br />
-    <div class="container-fluid">
+    <div class="container">
 
 
         <div class="row">
             <div class="col-lg-12">
-                <h3>Prueba de documento</h3>
-
-                <p>Desbes asignar tu rapidapikey para inciar con la prueba</p>
+                <p style="color: red;">Desbes asignar tu rapidapikey para inciar con la prueba [<a href="https://rapidapi.com/auth/sign-up">conseguir apirapidkey</a>]</p>
                 <form id="loadTesting" class="form-inline">
                     <div class="form-group">
                         <label>X-RAPIDAPI-KEY:</label>&nbsp;&nbsp;
@@ -69,9 +74,8 @@
                         </tbody>
                     </table>
                 </div>
-                <pre><code id="code" class="language-json">
+                <pre><code id="code" class="language-json"></code></pre>
 
-            </code></pre>
             </div>
         </div>
     </div>
@@ -79,14 +83,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>-->
-    <!--<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
 
     <script>
         $(document).ready(function() {
 
             let rapidapikey = "";
-            // hljs.highlightAll();
 
             $("#loadTesting").submit(function(event) {
                 rapidapikey = $("#rapidapikey").val();
@@ -157,6 +158,13 @@
             });
         });
     </script>
+
+    <br><br><br><br><br><br><br><br>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Contacto: <a href="mailto:nekszer@gmail.com">nekszer@gmail.com</a></span>
+        </div>
+    </footer>
 </body>
 
 </html>
