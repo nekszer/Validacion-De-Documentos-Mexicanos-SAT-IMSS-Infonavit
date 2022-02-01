@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "48ae875e-a0d2-4b69-b2b7-caaa42ac5ae3",
+		"name": "eValidaDocuments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lista de tipos de documentos que tienen validación",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "validacion-de-documentos-sat-imss1.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "c6fd86b024msh40feff6a9a7f10bp190952jsne1b0b3bd78f6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://validacion-de-documentos-sat-imss1.p.rapidapi.com/evalidaDocumentosApi/api/documents",
+					"protocol": "https",
+					"host": [
+						"validacion-de-documentos-sat-imss1",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"evalidaDocumentosApi",
+						"api",
+						"documents"
+					]
+				},
+				"description": "Lista de documentos disponibles para validar"
+			},
+			"response": []
+		},
+		{
+			"name": "ValidacionDeDocumento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "validacion-de-documentos-sat-imss1.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "c6fd86b024msh40feff6a9a7f10bp190952jsne1b0b3bd78f6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/NEKSZ/Downloads/EP-004_20211001_481_04_BAGM900531399_Manuel Alejandro Baez Garibay_CIF SAT.pdf"
+						},
+						{
+							"key": "documentId",
+							"value": "301",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://validacion-de-documentos-sat-imss1.p.rapidapi.com/evalidaDocumentosApi/api/Documents",
+					"protocol": "https",
+					"host": [
+						"validacion-de-documentos-sat-imss1",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"evalidaDocumentosApi",
+						"api",
+						"Documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decifra datos en base64",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-key",
+						"value": "c6fd86b024msh40feff6a9a7f10bp190952jsne1b0b3bd78f6",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-host",
+						"value": "validacion-de-documentos-sat-imss1.p.rapidapi.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://validacion-de-documentos-sat-imss1.p.rapidapi.com/evalidaDocumentosApi/api/documents/decodeData?documentId=301&base64Data=eyJSRkMiOiJISU45NzExMjFQQzciLCJRUlVybCI6Imh0dHBzOi8vc2lhdC5zYXQuZ29iLm14L2FwcC9xci9mYWNlcy9wYWdlcy9tb2JpbGUvdmFsaWRhZG9ycXIuanNmP0QxPTEwJkQyPTEmRDM9MTQxMTAwNDAyMDBfSElOOTcxMTIxUEM3IiwiSXNWYWxpZCI6dHJ1ZSwiTm9tYnJlIjoiSFlEUk9DT05UUk9MIElORFVTVFJJQUwiLCJFc3RhdHVzUGFkcm9uIjoiQUNUSVZPIiwiRmVjaGFJbmljaW9EZU9wZXJhY2lvbmVzIjoiMTk5Ny0xMS0yMVQwMDowMDowMCIsIkZlY2hhQ2FtYmlvVWx0aW1vRXN0YWRvIjpudWxsLCJDb3JyZW8iOiJQw6FnaW5hIiwiVGVsZWZvbm8iOiI4MSIsIkRpcmVjY2lvbiI6eyJDUCI6IjY0NTAwIiwiVGlwb1ZpYWxpZGFkIjoiQ0FMTEUiLCJOb21icmVWaWFsaWRhZCI6IlNFUlZJQ0lPIFBPU1RBTCIsIk51bWVyb0V4dGVyaW9yIjoiNDA0IiwiTnVtZXJvSW50ZXJpb3IiOiIiLCJMb2NhbGlkYWQiOiJERUwgTk9SVEUiLCJNdW5pY2lwaW8iOiJNT05URVJSRVkiLCJFc3RhZG8iOiJOVUVWTyBMRU9OIiwiRW50cmVDYWxsZSI6IkNBTExFIEVTQ09CRURPIGVzYXUuZ3VpbGxlbkBoeWRyb2Nvbi5jb20ubXgiLCJZQ2FsbGUiOiJDQUxMRSBFTUlMSU8gQ0FSUkFOWkEifSwiVGVsZWZvbm9Nb3ZpbCI6IiIsIkFjdGl2aWRhZGVzRWNvbm9taWNhcyI6W3siT3JkZW4iOjEsIkRlc2NyaXBjaW9uIjoiQ2FwdGFjacOzbiwgdHJhdGFtaWVudG8geSBzdW1pbmlzdHJvIGRlIGFndWEgcGFyYSB1c28gZGlzdGludG8gYWwgZG9tw6lzdGljbyAiLCJQb3JjZW50YWplIjoxMDAsIkZlY2hhRmluIjpudWxsLCJGZWNoYUluaWNpbyI6IjIwMTQtMDctMjVUMDA6MDA6MDAifV0sIkZlY2hhIjoiMjAxOS0xMC0wN1QwMDowMDowMCJ9",
+					"protocol": "https",
+					"host": [
+						"validacion-de-documentos-sat-imss1",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"evalidaDocumentosApi",
+						"api",
+						"documents",
+						"decodeData"
+					],
+					"query": [
+						{
+							"key": "documentId",
+							"value": "301"
+						},
+						{
+							"key": "base64Data",
+							"value": "eyJSRkMiOiJISU45NzExMjFQQzciLCJRUlVybCI6Imh0dHBzOi8vc2lhdC5zYXQuZ29iLm14L2FwcC9xci9mYWNlcy9wYWdlcy9tb2JpbGUvdmFsaWRhZG9ycXIuanNmP0QxPTEwJkQyPTEmRDM9MTQxMTAwNDAyMDBfSElOOTcxMTIxUEM3IiwiSXNWYWxpZCI6dHJ1ZSwiTm9tYnJlIjoiSFlEUk9DT05UUk9MIElORFVTVFJJQUwiLCJFc3RhdHVzUGFkcm9uIjoiQUNUSVZPIiwiRmVjaGFJbmljaW9EZU9wZXJhY2lvbmVzIjoiMTk5Ny0xMS0yMVQwMDowMDowMCIsIkZlY2hhQ2FtYmlvVWx0aW1vRXN0YWRvIjpudWxsLCJDb3JyZW8iOiJQw6FnaW5hIiwiVGVsZWZvbm8iOiI4MSIsIkRpcmVjY2lvbiI6eyJDUCI6IjY0NTAwIiwiVGlwb1ZpYWxpZGFkIjoiQ0FMTEUiLCJOb21icmVWaWFsaWRhZCI6IlNFUlZJQ0lPIFBPU1RBTCIsIk51bWVyb0V4dGVyaW9yIjoiNDA0IiwiTnVtZXJvSW50ZXJpb3IiOiIiLCJMb2NhbGlkYWQiOiJERUwgTk9SVEUiLCJNdW5pY2lwaW8iOiJNT05URVJSRVkiLCJFc3RhZG8iOiJOVUVWTyBMRU9OIiwiRW50cmVDYWxsZSI6IkNBTExFIEVTQ09CRURPIGVzYXUuZ3VpbGxlbkBoeWRyb2Nvbi5jb20ubXgiLCJZQ2FsbGUiOiJDQUxMRSBFTUlMSU8gQ0FSUkFOWkEifSwiVGVsZWZvbm9Nb3ZpbCI6IiIsIkFjdGl2aWRhZGVzRWNvbm9taWNhcyI6W3siT3JkZW4iOjEsIkRlc2NyaXBjaW9uIjoiQ2FwdGFjacOzbiwgdHJhdGFtaWVudG8geSBzdW1pbmlzdHJvIGRlIGFndWEgcGFyYSB1c28gZGlzdGludG8gYWwgZG9tw6lzdGljbyAiLCJQb3JjZW50YWplIjoxMDAsIkZlY2hhRmluIjpudWxsLCJGZWNoYUluaWNpbyI6IjIwMTQtMDctMjVUMDA6MDA6MDAifV0sIkZlY2hhIjoiMjAxOS0xMC0wN1QwMDowMDowMCJ9"
+						}
+					]
+				},
+				"description": "Decifra los datos que estan en base64 de la respuesta de la validacion de documento"
+			},
+			"response": []
+		}
+	]
+}
